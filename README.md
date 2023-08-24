@@ -9,7 +9,10 @@ Versión simple del juego de los ladrillos con javascript.
 Para ejecutar el juego sólo es necesario un navegador web.
 
 Descargad todos los ficheros en una carpeta de vuestro disco duro y abrir el fichero `index.html` en un navegador web (prefeiblemente Chrome).
+
 ## Instrucciones
+
+![Captura de pantalla](src/screenshot.png)
 
 El objetivo del juego es destruir todos los ladrillos con la pelota.
 
