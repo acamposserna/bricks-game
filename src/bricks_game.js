@@ -189,11 +189,15 @@ function dibujaLadrillos() {
     }
 }
 
+/**
+ * Muestra la puntuación en pantalla.
+ */
 function muestraPuntuacion() {
     ctx.font = "16px Retro Gaming"
     ctx.fillStyle = colorTexto;
     ctx.fillText("Puntuación: " + puntuacion, puntuacionX, puntuacionY);
 }
+
 /**
  * Esta función detecta si la pelota ha colisionado con algún ladrillo.
  *
@@ -232,8 +236,8 @@ function deteccionColision() {
  * @param {Event} ev
  */
 function keyDownHandler(ev) {
-    if (ev.keyCode == leftKeyCode) clickIzquierda = true;
-    else if (ev.keyCode == rightKeyCode) clickDerecha = true;
+    if (ev.keyCode === leftKeyCode) clickIzquierda = true;
+    else if (ev.keyCode === rightKeyCode) clickDerecha = true;
 }
 
 /**
@@ -243,8 +247,8 @@ function keyDownHandler(ev) {
  * @param {Event} ev
  */
 function keyUpHandler(ev) {
-    if (ev.keyCode == leftKeyCode) clickIzquierda = false;
-    else if (ev.keyCode == rightKeyCode) clickDerecha = false;
+    if (ev.keyCode === leftKeyCode) clickIzquierda = false;
+    else if (ev.keyCode === rightKeyCode) clickDerecha = false;
 }
 
 /**
@@ -276,7 +280,7 @@ function main() {
         ladrillos[colision[1]][colision[2]].visible = false;
         ladrillosDestruidos++;
         puntuacion += (3-colision[2]);
-        if (ladrillosDestruidos == totalLadrillos) {
+        if (ladrillosDestruidos === totalLadrillos) {
             muestraPuntuacion();
             alert("HAS GANADO!!");
             inicializaJuego();
